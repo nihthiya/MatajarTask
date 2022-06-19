@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg"
-    tools:context=".ui.productDetails.ProductDetailsFragment">
+    tools:context=".ui.productDetails.fragment.ProductDetailsFragment">
 
     <ImageView
         android:id="@+id/ivImage"

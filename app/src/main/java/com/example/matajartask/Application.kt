@@ -1,11 +1,9 @@
 package com.example.matajartask
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
-import androidx.annotation.StringRes
 import androidx.multidex.MultiDexApplication
 import dagger.hilt.android.HiltAndroidApp
 
@@ -14,10 +12,6 @@ class Application : MultiDexApplication() {
     companion object {
         private var app: Application? = null
         fun app(): Application = app!!
-        fun sharedPreferences(): SharedPreferences =
-            app!!.getSharedPreferences("Name", Context.MODE_PRIVATE)
-
-        fun getString(@StringRes stringId: Int): String = app().getString(stringId)
 
 
         fun isConnected(): Boolean {
@@ -41,16 +35,6 @@ class Application : MultiDexApplication() {
 
     override fun onCreate() {
         super.onCreate()
-//        startKoin {
-//            androidContext(this@Application)
-//            modules(listOf(
-//                viewModelModule,
-//                apiModule,
-//                repositoryModule,
-//                RetrofitModule
-//            ))
-//        }
-
         app = this
     }
 }

@@ -12,23 +12,6 @@ class ProductListApiHelperImpl @Inject constructor(private val productListApi: P
 
     override suspend fun getProductListAsync(productListRequest: ProductListRequest): Response<ProductListResponse> =
         productListApi.getProductListAsync(productListRequest)
-
-
-//    override suspend fun getProductListByHandle(
-//        appId: String,
-//        page: String,
-//        handle: String,
-//        sort : String,
-//        languageCode: String
-//    ): Response<ProductListResponse>  = productListApi.getProductListByHandle(appId = appId, page = page, handle = handle, sort= sort, languageCode = languageCode)
-
-//    override suspend fun subscribeProduct(
-//        appId: String,
-//        type: String,
-//        subscribeProductRequest: SubscribeProductRequest
-//    ): Response<SubscribeProductResponse> =
-//        productListApi.subscribeProduct(appId,type,subscribeProductRequest)
-
 }
 
 

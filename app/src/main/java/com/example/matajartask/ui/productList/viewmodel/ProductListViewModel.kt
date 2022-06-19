@@ -28,7 +28,7 @@ class ProductListViewModel @Inject constructor(
 
 
     fun getAllProducts(context: Context, skipCount: Int) {
-        var arrayList = ArrayList<String>()
+        val arrayList = ArrayList<String>()
         arrayList.add("621a01ab2e94a94f51f62afa")
         arrayList.add("623acc516242467c74fd7955")
         arrayList.add("6246a8f82fdf7b7ba71072e0")

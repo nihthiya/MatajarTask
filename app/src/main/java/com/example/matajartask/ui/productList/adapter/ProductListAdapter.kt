@@ -47,7 +47,7 @@ class ProductListAdapter() : RecyclerView.Adapter<ProductListAdapter.ViewHolder>
             Glide.with(context).load(item!!.arrayThumbnail?.get(0)?.imageUrl).into(holder.itemProductBinding.ivImage)
 
 
-            holder.itemProductBinding.tvProductName.text = item!!.strProductName
+            holder.itemProductBinding.tvProductName.text = item.strProductName
             holder.itemProductBinding.tvProductDes.text = item.strDescription
             holder.itemProductBinding.tvProductPrice.text = "AED " + item.intSellingPrice.toString()
 

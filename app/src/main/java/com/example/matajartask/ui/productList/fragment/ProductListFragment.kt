@@ -1,4 +1,4 @@
-package com.example.matajartask.ui.productList
+package com.example.matajartask.ui.productList.fragment
 
 
 import android.os.Bundle
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.matajartask.R
 import com.example.matajartask.databinding.FragmentProductListBinding
-import com.example.matajartask.ui.productDetails.ProductDetailsFragment
+import com.example.matajartask.ui.productDetails.fragment.ProductDetailsFragment
 import com.example.matajartask.ui.productList.adapter.ProductListAdapter
 import com.example.matajartask.ui.productList.viewmodel.ProductListViewModel
 import dagger.hilt.android.AndroidEntryPoint

@@ -8,13 +8,4 @@ interface ProductListApiHelper {
 
     suspend fun getProductListAsync(productListRequest: ProductListRequest): Response<ProductListResponse>
 
-//    suspend fun getProductListByHandle(
-//        appId: String,
-//        page: String,
-//        handle: String,
-//        sort : String,
-//        languageCode: String
-//    ): Response<ProductListResponse>
-//
-
 }

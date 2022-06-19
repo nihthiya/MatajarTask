@@ -9,7 +9,7 @@
 
    <androidx.fragment.app.FragmentContainerView
        android:id="@+id/frag"
-       android:name="com.example.matajartask.ui.productList.ProductListFragment"
+       android:name="com.example.matajartask.ui.productList.fragment.ProductListFragment"
        android:layout_width="match_parent"
        android:background="@color/bg"
        android:layout_height="match_parent"

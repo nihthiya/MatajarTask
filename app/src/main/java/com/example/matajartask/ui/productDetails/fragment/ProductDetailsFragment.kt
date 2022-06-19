@@ -1,16 +1,14 @@
-package com.example.matajartask.ui.productDetails
+package com.example.matajartask.ui.productDetails.fragment
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.matajartask.R
 import com.example.matajartask.databinding.FragmentProductDetailsBinding
-import com.example.matajartask.databinding.FragmentProductListBinding
 
 class ProductDetailsFragment : Fragment() {
     private lateinit var productdetailsBinding: FragmentProductDetailsBinding
