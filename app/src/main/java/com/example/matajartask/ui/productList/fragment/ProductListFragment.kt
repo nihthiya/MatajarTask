@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.matajartask.R
+import com.example.matajartask.data.model.Response.DataItem
 import com.example.matajartask.databinding.FragmentProductListBinding
 import com.example.matajartask.ui.productDetails.fragment.ProductDetailsFragment
 import com.example.matajartask.ui.productList.adapter.ProductListAdapter
@@ -25,7 +26,7 @@ class ProductListFragment : Fragment() {
     private val productListViewModel: ProductListViewModel by viewModels()
     var previousItemCount: Int = 0
     var totalCount: Int = 0
-
+    var list = ArrayList<DataItem?>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -70,24 +71,25 @@ class ProductListFragment : Fragment() {
 
 
         productListViewModel.productList.observe(this.viewLifecycleOwner) { productList ->
+
+            list.addAll(productList.data!!.toList())
             totalCount = productList.count!!
             if (previousItemCount < totalCount) {
 
                 productslistBinding.rvProductList.also { rv ->
                     rv.adapter = ProductListAdapter(
                         requireContext(),
-                        productList.data
+                        list
                     ) { name, url ->
                         moveToNextFragment(name,url)
 
                     }
 
                     previousItemCount = rv.adapter!!.itemCount
-//                rv.adapter!!.notifyItemRangeInserted(previousItem
-                    //                Count,previousItemCount + productList.data!!.count())
+                    rv.adapter!!.notifyItemRangeInserted(previousItemCount,previousItemCount + productList.data.count())
+                    productslistBinding.loadMoreLayout.visibility = View.GONE
 
                 }
-                productslistBinding.loadMoreLayout.visibility = View.GONE
 
             }
 
